@@ -4,9 +4,8 @@ import json
 import random
 import webbrowser
 import time
-import  cv2
 from streamlit_lottie import st_lottie
-from PIL import Image
+
 
 
 ## url of server
