@@ -3,8 +3,13 @@ import requests
 import json
 import random
 import webbrowser
+import os
 import time
-from streamlit_lottie import st_lottie
+try:
+    from streamlit_lottie import st_lottie
+except:
+    os.cmd('pip install streamlit_lottie')
+    from streamlit_lottie import st_lottie
 
 
 
