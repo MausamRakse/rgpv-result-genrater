@@ -8,7 +8,7 @@ import time
 try:
     from streamlit_lottie import st_lottie
 except:
-    os.cmd('pip install streamlit_lottie')
+    os.system('pip install streamlit_lottie')
     from streamlit_lottie import st_lottie
 
 
