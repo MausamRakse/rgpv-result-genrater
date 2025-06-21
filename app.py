@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 import random
-import webbrowser
+# import webbrowser
 from streamlit_lottie import st_lottie
 import os
 import time
@@ -44,8 +44,8 @@ with st.sidebar:
     token =st.text_input("ENTER TOKEN",st.session_state["my_input"])     
     file = st.button("Get File")
     if file:
-       
-        webbrowser.open(url+'/get_file?token='+token)
+        file_url = f"{url}/get_file?token={token}"
+        st.markdown(f"[Download File]({file_url})", unsafe_allow_html=True)
 
 
    
