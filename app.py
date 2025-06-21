@@ -3,15 +3,9 @@ import requests
 import json
 import random
 import webbrowser
+from streamlit_lottie import st_lottie
 import os
 import time
-try:
-    from streamlit_lottie import st_lottie
-except:
-    os.system('pip install streamlit_lottie')
-    from streamlit_lottie import st_lottie
-
-
 
 ## url of server
 url='https://tough-novel-cattle.ngrok-free.app'
@@ -47,7 +41,7 @@ with st.sidebar:
 with st.sidebar:
     st.header("FOR DOWNLOADE FILE")
     st.subheader(" FILL TOKEN ✍🏻")
-    token =st.text_input("ENTER TOKEN",st.session_state["my_input"])
+    token =st.text_input("ENTER TOKEN",st.session_state["my_input"])     
     file = st.button("Get File")
     if file:
        
