@@ -1,77 +1,117 @@
-# 📊 RGPV Result Generator
+🎬 Advanced Scene Generator
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)  
-[![GitHub stars](https://img.shields.io/github/stars/MausamRakse/rgpv-result-genrater?style=social)](https://github.com/MausamRakse/rgpv-result-genrater/stargazers)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/mousam-rakse)  
-[![Email](https://img.shields.io/badge/Email-Contact-red?logo=gmail)](mailto:mousamrakse@gmail.com)  
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+An interactive Streamlit app that lets you build visual scenes by combining a background image with multiple character sprites.
+The app supports prompt-driven auto-placement, per-character controls, and exports to PNG, JSON, and PDF documentation.
 
----
+🚀 Features
 
-🚀 **RGPV Result Generator** is a Python automation tool to fetch and generate results from **Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)**.  
-No more manual searching — get results instantly in CSV format for analysis and record-keeping.  
+Natural Language Placement
 
-🎥 **[Watch Demo Video](https://drive.google.com/file/d/1-cY08hJy0YjFlRcU3DcEHp3hrRKbSJEn/view?usp=sharing)**  
+Detects keywords like left, right, top, bottom, center from your prompt.
 
+Auto-places characters accordingly.
 
+Action Extraction
 
+Tags actions such as waving, sitting, reading, running, etc. from the prompt.
 
----
+Stored as metadata in scene JSON and PDF.
 
-## ✨ Features
-- ✅ Automates fetching of student results from the RGPV portal  
-- ✅ Exports results into **CSV format** for easy analysis  
-- ✅ Clean & modular Python design  
-- ✅ Ready to extend with **GUI / Web App**  
+Character Management
 
----
+Upload multiple characters (transparent PNG/webp recommended).
 
-## ⚡ Quick Start
+Adjust position, scale, flip horizontally, z-order, and rename.
 
-    ```bash
- Clone the repo
-git clone https://github.com/MausamRakse/rgpv-result-genrater.git
-cd rgpv-result-genrater
+Background Support
 
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+Upload any background image or use a blank canvas.
 
-# Install dependencies
+Adjustable canvas size (default: 1280×720).
+
+Exports
+
+PNG (composed scene)
+
+JSON (scene data structure)
+
+PDF (documentation with scene preview, character details, reflections/notes)
+
+📦 Installation
+
+Clone this repository and install dependencies:
+
+git clone https://github.com/your-username/scene-generator.git
+cd scene-generator
 pip install -r requirements.txt
 
-# Run the script
-python app.py
-📝 Example Output (CSV)
-Roll No.	Name	Semester	SGPA	CGPA	Result
-210210101	Alice Sharma	6	8.5	8.4	PASS
-210210102	Raj Patel	6	7.9	7.8	PASS
 
-📂 Project Structure
-csharp
-Copy
-Edit
-rgpv-result-genrater/
-│── app.py             # Main script
-│── Automation.py      # Core automation logic
-│── webhook.py         # Optional webhook integration
-│── requirements.txt   # Dependencies
-│── results.csv        # Sample output
-│── new.png            # Demo screenshot
-│── README.md          # Documentation
-🔮 Future Roadmap
-🌐 Web dashboard using Flask / Streamlit
+Requirements (requirements.txt):
 
-📧 Auto email / SMS result delivery
+streamlit
+pillow
+reportlab
 
-📊 Result analytics & visualization
+▶️ Usage
 
-👩‍💻 Author
-Mousam Rakse
-📧 Email Me
-🔗 LinkedIn
-⭐ Star this repo
+Run the Streamlit app:
 
-📜 License
-This project is licensed under the MIT License — free to use and modify.
+streamlit run app.py
+
+
+Then open the local URL shown in your terminal (default: http://localhost:8501).
+
+🖼️ How It Works
+
+Enter a scene prompt in the sidebar.
+
+Example:
+“Two characters sitting at a table on the right; one is waving, the other is reading.”
+
+Upload a background image (optional).
+
+Upload character images (transparent PNG recommended).
+
+Click “Auto-place from prompt” or adjust positions manually with sliders.
+
+Preview the scene in real-time.
+
+Export to PNG, JSON, or PDF.
+
+📂 Output Formats
+
+PNG – Final rendered scene
+
+JSON – Scene metadata, including character positions, scale, z-order, and actions
+
+PDF – Documentation with:
+
+Cover page
+
+Scene prompt and preview
+
+Character details & thumbnails
+
+Reflections & notes section
+
+🧩 Example Prompt
+Three characters on the bottom:
+- Left one is waving
+- Middle one is reading
+- Right one is sitting
+
+🧪 Ideas for Extensions
+
+Drag-and-drop character placement with a custom Streamlit component.
+
+Pose control integration (OpenPose + ControlNet).
+
+Timeline-based multi-scene storytelling.
+
+Animation exports (GIF/WebM).
+
+👨‍💻 Author
+
+Your Name
+
+Contact: mousamrakse@gmail.com
